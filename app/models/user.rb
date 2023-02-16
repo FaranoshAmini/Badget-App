@@ -1,5 +1,5 @@
 class User < ApplicationRecord
-    validates :Name, presence: true
-    has_many :groups
-    has_many :transacts
+  validates :Name, presence: true
+  has_many :groups, dependent: :destroy
+  has_many :transacts, dependent: :destroy
 end
