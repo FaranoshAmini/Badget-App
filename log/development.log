@@ -350,3 +350,11 @@ FOREIGN KEY ("user_id")
   [1m[36mTRANSACTION (3.4ms)[0m  [1m[35mCOMMIT[0m
   [1m[35m (1.5ms)[0m  [1m[34mSELECT pg_advisory_unlock(3462961633047280245)[0m
   [1m[36mActiveRecord::SchemaMigration Pluck (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-16 16:37:01 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 79.1ms | Allocations: 502)
+Completed 200 OK in 312ms (Views: 131.1ms | ActiveRecord: 0.0ms | Allocations: 3584)
+
+
