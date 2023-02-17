@@ -1,0 +1,22 @@
+<%= render partial: 'shared/navbar', locals: { heading: 'Groups', back_path: groups_path } %>
+<ul class="groups-section">
+<% @groups.includes(:expenses).each do |gro| %>
+    <li class="groups-section-item">
+      <ul class="groups-container">
+       <li class="groups-image">
+        <%= image_tag(gro.image, class: "groups-image") if gro.image.attached? %>
+        </li>
+        <li class="groups-detail">
+          <span><%= link_to gro.name, group_expenses_path(group_id: gro.id) %></span>
+          <span><%= gro.created_at.strftime("%d-%m-%y") %></span>
+        </li>
+        <li class="groups-amount">
+          <span>$<%= gro.total_expenses_amount %></span>
+        </li>
+        </ul>
+        </li>
+        <% end %>
+        </ul>  
+        <div class='create-group-btn-container'>
+          <%= link_to "create group", new_group_path, class: 'create-group-btn' %>
+          </div>
