@@ -43,7 +43,7 @@ gem 'tzinfo-data', platforms: %i[mingw mswin x64_mingw jruby]
 gem 'bootsnap', require: false
 gem 'devise'
 
-# cancancan for authorication
+# cancancan for authorization
 gem 'cancancan'
 
 # Use Sass to process CSS
