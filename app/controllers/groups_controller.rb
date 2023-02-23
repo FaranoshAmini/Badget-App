@@ -11,10 +11,10 @@ class GroupsController < ApplicationController
   def create
     @group = current_user.groups.new(gro_params)
     if @group.save
-      flash[:notice] = 'Successfully created group.'
+      flash[:notice] = 'Successfully created Category.'
       redirect_to groups_path
     else
-      flash[:notice] = 'Invalid group. Please try again.'
+      flash[:notice] = 'Invalid Category. Please try again.'
     end
   end
 

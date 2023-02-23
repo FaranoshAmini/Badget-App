@@ -1,0 +1,7 @@
+<%= form_for :Expense, url: group_expense_path(@group), method: :post do |form|  %>
+  <div class='expense-form'>
+    <%= form.text_field :name, class: 'expense_name_field expense_form_field', placeholder: 'Name' %>
+    <%= form.text_field :amount, class: 'expense_amount_field expense_form_field', placeholder: 'Amount' %>
+    <%= form.submit "Submit", class: 'expense_form_btn expense_form_field' %>
+  </div>
+<% end %>

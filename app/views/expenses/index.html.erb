@@ -1,0 +1,10 @@
+<%= render partial: 'shared/navbar', locals: { heading: 'EXPENSES', back_path: expenses_path} %>
+<ul class="expenses-container-part">
+<% @group.expenses.each do |expense| %>
+  <li class='expenses-container'>
+    <span><%= expense.name %></span>
+    <span>$<%= expense.amount %></span>
+  </li>
+<% end %>
+</ul>
+<%= link_to "Create Expense", new_group_expense_path(@group), class: 'expense-create-btn' %>

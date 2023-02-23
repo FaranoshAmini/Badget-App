@@ -1,6 +1,8 @@
-<%= render partial: 'shared/navbar', locals: {heading: 'CREATE GROUP', back_path: groups_path } %>
+<%= render partial: 'shared/navbar', locals: {heading: 'CREATE CATERGORY', back_path: groups_path } %>
 <%= form_for :group, url: groups_path, method: :post do |form| %>
 <div class="group-form">
-<%= form.text_field :name, class: 'group-form-field group_name_field', placeholder: 'Group Name' %>
+<%= form.text_field :name, class: 'group-form-field group_name_field', placeholder: 'Category Name' %>
 Insert Icon: <%= form.file_field :image %>
 <%= form.submit "Submit", class: 'group-form-field group-form-btn' %>
+</div>
+<% end %>

@@ -1154,3 +1154,577 @@ Processing by Rails::WelcomeController#index as HTML
 Completed 200 OK in 7ms (Views: 2.9ms | ActiveRecord: 0.0ms | Allocations: 231)
 
 
+Started GET "/" for 127.0.0.1 at 2023-02-17 23:39:02 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (65.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (84.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 64.5ms | Allocations: 1602)
+  Rendered groups/index.html.erb within layouts/application (Duration: 198.0ms | Allocations: 2388)
+  Rendered layout layouts/application.html.erb (Duration: 201.2ms | Allocations: 2482)
+Completed 500 Internal Server Error in 1040ms (ActiveRecord: 0.0ms | Allocations: 11423)
+
+
+  
+ActionView::Template::Error (wrong number of arguments (given 0, expected 1..2)):
+    1: <nav class="navbar">
+    2:   <%= link_to image_tag(), back_path, class: 'back-btn'%>
+    3:    <h3 class="nav-heading"><%= heading %></h3>
+    4:    <%if user_signed_in?%>
+    5:      <% button_to "sign out", destroy_user_session_path, method: :delete, class: 'sign_out_btn'%>
+  
+app/views/shared/_navbar.html.erb:2
+app/views/groups/index.html.erb:1
+Started GET "/" for 127.0.0.1 at 2023-02-17 23:40:26 +0430
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 1702.1ms | Allocations: 28810)
+  [1m[36mGroup Load (54.2ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 2161.7ms | Allocations: 38452)
+  Rendered layout layouts/application.html.erb (Duration: 2287.7ms | Allocations: 52963)
+Completed 200 OK in 2322ms (Views: 2253.9ms | ActiveRecord: 57.4ms | Allocations: 53898)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-17 23:40:31 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 79.1ms | Allocations: 2677)
+  Rendered layout layouts/application.html.erb (Duration: 80.5ms | Allocations: 2756)
+Completed 500 Internal Server Error in 105ms (ActiveRecord: 3.5ms | Allocations: 6995)
+
+
+  
+ActionView::Template::Error (Missing partial groups/_group, application/_group with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/Faranoosh/Documents/Badget-App/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4.2/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4.2/app/views"
+
+Did you mean?  groups/group_form
+               action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/remote_image
+               layouts/action_text/contents/content
+               expenses/expense_form):
+    1: <%= render partial: 'group'%>
+  
+app/views/groups/new.html.erb:1
+Started GET "/" for 127.0.0.1 at 2023-02-17 23:40:40 +0430
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 8.6ms | Allocations: 871)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 17.4ms | Allocations: 1750)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 3939)
+Completed 200 OK in 74ms (Views: 68.2ms | ActiveRecord: 0.8ms | Allocations: 4273)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-02-17 23:40:45 +0430
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.8ms | Allocations: 853)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1708)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 3885)
+Completed 200 OK in 46ms (Views: 36.1ms | ActiveRecord: 1.2ms | Allocations: 5630)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-02-17 23:40:46 +0430
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.9ms | Allocations: 853)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1709)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 3886)
+Completed 200 OK in 44ms (Views: 32.1ms | ActiveRecord: 1.1ms | Allocations: 5645)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-02-17 23:40:48 +0430
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 4.5ms | Allocations: 853)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 12.4ms | Allocations: 1709)
+  Rendered layout layouts/application.html.erb (Duration: 32.5ms | Allocations: 3887)
+Completed 200 OK in 49ms (Views: 36.8ms | ActiveRecord: 1.1ms | Allocations: 5652)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-02-17 23:40:48 +0430
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 12.6ms | Allocations: 853)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 22.8ms | Allocations: 1709)
+  Rendered layout layouts/application.html.erb (Duration: 41.2ms | Allocations: 3886)
+Completed 200 OK in 56ms (Views: 42.5ms | ActiveRecord: 1.1ms | Allocations: 5636)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-17 23:41:35 +0430
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 451ms (ActiveRecord: 1.0ms | Allocations: 3774)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-17 23:41:35 +0430
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.6ms | Allocations: 975)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 13.3ms | Allocations: 1866)
+  Rendered layout layouts/application.html.erb (Duration: 33.3ms | Allocations: 4062)
+Completed 200 OK in 39ms (Views: 34.5ms | ActiveRecord: 0.8ms | Allocations: 4442)
+
+
+Started GET "/user/sign_up" for 127.0.0.1 at 2023-02-17 23:42:51 +0430
+  
+ActionController::RoutingError (No route matches [GET] "/user/sign_up"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-17 23:43:27 +0430
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 12ms (ActiveRecord: 0.5ms | Allocations: 1868)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-17 23:43:27 +0430
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.8ms | Allocations: 964)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 13.1ms | Allocations: 1850)
+  Rendered layout layouts/application.html.erb (Duration: 32.8ms | Allocations: 4056)
+Completed 200 OK in 40ms (Views: 35.5ms | ActiveRecord: 0.5ms | Allocations: 4420)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-17 23:43:29 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 48.2ms | Allocations: 2384)
+  Rendered layout layouts/application.html.erb (Duration: 49.4ms | Allocations: 2461)
+Completed 500 Internal Server Error in 62ms (ActiveRecord: 0.3ms | Allocations: 4180)
+
+
+  
+ActionView::Template::Error (Missing partial groups/_group, application/_group with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/Faranoosh/Documents/Badget-App/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4.2/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4.2/app/views"
+
+Did you mean?  groups/group_form
+               action_text/contents/content
+               active_storage/blobs/blob
+               action_text/attachables/remote_image
+               layouts/action_text/contents/content
+               expenses/expense_form):
+    1: <%= render partial: 'group'%>
+  
+app/views/groups/new.html.erb:1
+Started GET "/" for 127.0.0.1 at 2023-02-17 23:44:17 +0430
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 16.8ms | Allocations: 1248)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 42.0ms | Allocations: 2629)
+  Rendered layout layouts/application.html.erb (Duration: 66.6ms | Allocations: 5077)
+Completed 200 OK in 95ms (Views: 86.2ms | ActiveRecord: 0.6ms | Allocations: 5938)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-17 23:44:20 +0430
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 12.2ms | Allocations: 853)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 25.8ms | Allocations: 1710)
+  Rendered layout layouts/application.html.erb (Duration: 43.9ms | Allocations: 3887)
+Completed 200 OK in 59ms (Views: 52.0ms | ActiveRecord: 0.5ms | Allocations: 4239)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-17 23:44:23 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 59.1ms | Allocations: 2494)
+  Rendered layout layouts/application.html.erb (Duration: 68.2ms | Allocations: 2571)
+Completed 500 Internal Server Error in 86ms (ActiveRecord: 0.4ms | Allocations: 4359)
+
+
+  
+ActionView::Template::Error (Missing partial group/_group_form with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/Faranoosh/Documents/Badget-App/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/devise-4.8.1/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actiontext-7.0.4.2/app/views"
+  * "C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionmailbox-7.0.4.2/app/views"
+
+Did you mean?  groups/group_form
+               expenses/expense_form
+               action_text/attachables/remote_image
+               layouts/action_text/contents/content
+               shared/navbar
+               action_text/contents/content):
+    1: <%= render partial: 'group/group_form'%>
+  
+app/views/groups/new.html.erb:1
+Started GET "/transactions" for 127.0.0.1 at 2023-02-17 23:48:05 +0430
+  
+ActionController::RoutingError (No route matches [GET] "/transactions"):
+  
+Started GET "/groups/1/expenses" for 127.0.0.1 at 2023-02-17 23:48:38 +0430
+Processing by ExpensesController#index as HTML
+  Parameters: {"group_id"=>"1"}
+  [1m[36mUser Load (1.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1 AND "groups"."id" = $2 LIMIT $3[0m  [["user_id", 34], ["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:3:in `index'
+Completed 404 Not Found in 41ms (ActiveRecord: 2.0ms | Allocations: 3141)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find Group with 'id'=1 [WHERE "groups"."user_id" = $1]):
+  
+app/controllers/expenses_controller.rb:3:in `index'
+Started GET "/" for 127.0.0.1 at 2023-02-18 00:03:43 +0430
+  [1m[36mUser Load (4.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 32.9ms | Allocations: 1248)
+  [1m[36mGroup Load (6.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 54.8ms | Allocations: 2631)
+  Rendered layout layouts/application.html.erb (Duration: 143.7ms | Allocations: 5083)
+Completed 200 OK in 220ms (Views: 207.3ms | ActiveRecord: 6.5ms | Allocations: 5962)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-18 00:03:46 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/_group_form.html.erb (Duration: 19.5ms | Allocations: 1342)
+  Rendered groups/new.html.erb within layouts/application (Duration: 24.8ms | Allocations: 1549)
+  Rendered layout layouts/application.html.erb (Duration: 25.9ms | Allocations: 1627)
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 0.5ms | Allocations: 3495)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render partial: 'shared/navbar', locals: {heading: 'CREATE GROUP', back_path: groups_path } %>
+<%= form_for :group, url: groups_path, method: :post do |form| %>
+<div class="group-form">
+<%= form.text_field :name, class: 'group-form-field group_name_field', placeholder: 'Group Name' %>
+Insert Icon: <%= form.file_field :image %>
+<%= form.submit "Submit", class: 'group-form-field group-form-btn' %>
+):
+1:    <%= render partial: 'shared/navbar', locals: {heading: 'CREATE GROUP', back_path: groups_path } %>
+2:    <%= form_for :group, url: groups_path, method: :post do |form| %>
+3:    <div class="group-form">
+4:    <%= form.text_field :name, class: 'group-form-field group_name_field', placeholder: 'Group Name' %>
+5:    Insert Icon: <%= form.file_field :image %>
+6:    <%= form.submit "Submit", class: 'group-form-field group-form-btn' %>
+  
+app/views/groups/_group_form.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/groups/_group_form.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/groups/_group_form.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/groups/_group_form.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/groups/_group_form.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/groups/_group_form.html.erb:8: syntax error, unexpected end-of-input, expecting `end'
+app/views/groups/new.html.erb:1
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-18 00:07:10 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 12.1ms | Allocations: 1260)
+  Rendered groups/_group_form.html.erb (Duration: 251.3ms | Allocations: 8386)
+  Rendered groups/new.html.erb within layouts/application (Duration: 255.3ms | Allocations: 8636)
+  Rendered layout layouts/application.html.erb (Duration: 285.1ms | Allocations: 11194)
+Completed 200 OK in 315ms (Views: 299.7ms | ActiveRecord: 0.7ms | Allocations: 13462)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 00:07:24 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 109ms (ActiveRecord: 0.8ms | Allocations: 4623)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 00:07:35 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000020a4815e6f0 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-9840-eebybw.jpg>, @original_filename="1663011178440.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663011178440.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x0000020a48164988>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000020a4815e6f0 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-9840-eebybw.jpg>, @original_filename="1663011178440.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663011178440.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 0.8ms | Allocations: 2800)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 00:07:36 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000020a48226010 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-9840-epftod.jpg>, @original_filename="1663011178440.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663011178440.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x0000020a482270a0>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000020a48226010 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-9840-epftod.jpg>, @original_filename="1663011178440.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663011178440.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 0.6ms | Allocations: 2516)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 00:07:37 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000020a482d5f88 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-9840-8o6q8.jpg>, @original_filename="1663011178440.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663011178440.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x0000020a482d7158>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000020a482d5f88 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-9840-8o6q8.jpg>, @original_filename="1663011178440.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663011178440.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 24ms (ActiveRecord: 0.5ms | Allocations: 2507)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 00:07:55 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 0.4ms | Allocations: 2427)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 00:08:34 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 21ms (ActiveRecord: 0.5ms | Allocations: 2409)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 01:07:48 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 91.6ms | Allocations: 291)
+Completed 200 OK in 113ms (Views: 102.5ms | Allocations: 1062)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 01:07:52 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 50.5ms | Allocations: 280)
+Completed 200 OK in 66ms (Views: 55.0ms | Allocations: 945)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-02-18 01:08:02 +0430
+Processing by Devise::SessionsController#new as HTML
+  [1m[36mUser Load (4.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 199ms (ActiveRecord: 48.8ms | Allocations: 7588)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 01:08:02 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 22)
+Completed 200 OK in 8ms (Views: 3.4ms | ActiveRecord: 0.0ms | Allocations: 294)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-18 01:08:23 +0430
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 11ms (ActiveRecord: 0.7ms | Allocations: 2076)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 01:08:23 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 0.3ms | Allocations: 22)
+Completed 200 OK in 7ms (Views: 3.0ms | ActiveRecord: 0.0ms | Allocations: 290)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-18 01:11:37 +0430
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 65ms (ActiveRecord: 42.7ms | Allocations: 4964)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 01:11:41 +0430
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 10.2ms | Allocations: 1262)
+  [1m[36mGroup Load (2.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 44.7ms | Allocations: 3184)
+  Rendered layout layouts/application.html.erb (Duration: 129.2ms | Allocations: 17480)
+Completed 200 OK in 157ms (Views: 133.3ms | ActiveRecord: 6.5ms | Allocations: 20078)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 16:20:08 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (202.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 156.4ms | Allocations: 501)
+Completed 200 OK in 740ms (Views: 327.0ms | ActiveRecord: 0.0ms | Allocations: 3599)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-18 16:20:26 +0430
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (64.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 675ms (ActiveRecord: 164.9ms | Allocations: 10970)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 16:20:27 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 5.5ms | Allocations: 281)
+Completed 200 OK in 25ms (Views: 17.8ms | ActiveRecord: 0.0ms | Allocations: 959)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-18 16:20:43 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 1272.0ms | Allocations: 23385)
+  Rendered groups/_group_form.html.erb (Duration: 1426.7ms | Allocations: 24687)
+  Rendered groups/new.html.erb within layouts/application (Duration: 1486.8ms | Allocations: 24958)
+  Rendered layout layouts/application.html.erb (Duration: 1782.0ms | Allocations: 39527)
+Completed 200 OK in 1951ms (Views: 1793.7ms | ActiveRecord: 6.0ms | Allocations: 46189)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 16:20:52 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 470ms (ActiveRecord: 0.8ms | Allocations: 6044)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 16:23:12 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000015fb6b912b8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-11592-tjyjem.jpg>, @original_filename="IMG_20221119_212910_044.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"IMG_20221119_212910_044.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x0000015fb6b93a90>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000015fb6b912b8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-11592-tjyjem.jpg>, @original_filename="IMG_20221119_212910_044.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"IMG_20221119_212910_044.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 26ms (ActiveRecord: 0.8ms | Allocations: 2771)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 16:23:14 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000015fb6c95ee8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-11592-gz3jf.jpg>, @original_filename="IMG_20221119_212910_044.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"IMG_20221119_212910_044.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x0000015fb6c97928>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x0000015fb6c95ee8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230218-11592-gz3jf.jpg>, @original_filename="IMG_20221119_212910_044.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"IMG_20221119_212910_044.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 44ms (ActiveRecord: 0.7ms | Allocations: 2526)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-18 17:44:46 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (4.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 12.1ms | Allocations: 1278)
+  Rendered groups/_group_form.html.erb (Duration: 21.7ms | Allocations: 2120)
+  Rendered groups/new.html.erb within layouts/application (Duration: 26.4ms | Allocations: 2362)
+  Rendered layout layouts/application.html.erb (Duration: 110.6ms | Allocations: 16670)
+Completed 200 OK in 451ms (Views: 127.8ms | ActiveRecord: 68.5ms | Allocations: 27904)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-18 17:45:08 +0430
+Processing by Devise::RegistrationsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Redirected to http://127.0.0.1:3000/
+Filter chain halted as :require_no_authentication rendered or redirected
+Completed 302 Found in 14ms (ActiveRecord: 0.5ms | Allocations: 2145)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-18 17:45:08 +0430
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.1ms | Allocations: 975)
+  [1m[36mGroup Load (72.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 391.5ms | Allocations: 2806)
+  Rendered layout layouts/application.html.erb (Duration: 406.4ms | Allocations: 5116)
+Completed 200 OK in 416ms (Views: 335.8ms | ActiveRecord: 72.3ms | Allocations: 6139)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-18 17:45:14 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 7.1ms | Allocations: 890)
+  Rendered groups/_group_form.html.erb (Duration: 9.7ms | Allocations: 1401)
+  Rendered groups/new.html.erb within layouts/application (Duration: 10.6ms | Allocations: 1470)
+  Rendered layout layouts/application.html.erb (Duration: 27.9ms | Allocations: 3648)
+Completed 200 OK in 47ms (Views: 33.2ms | ActiveRecord: 0.6ms | Allocations: 5580)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-18 17:45:17 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 25ms (ActiveRecord: 0.6ms | Allocations: 3409)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-18 22:17:24 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (56.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (112.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 1205.1ms | Allocations: 23425)
+  Rendered groups/_group_form.html.erb (Duration: 1441.2ms | Allocations: 24765)
+  Rendered groups/new.html.erb within layouts/application (Duration: 1531.0ms | Allocations: 25264)
+  Rendered layout layouts/application.html.erb (Duration: 1789.2ms | Allocations: 39858)
+Completed 200 OK in 3108ms (Views: 1932.1ms | ActiveRecord: 218.9ms | Allocations: 57058)
+
+
