@@ -1,8 +1,8 @@
 <%= render partial: 'shared/navbar', locals: {heading: 'CREATE CATERGORY', back_path: groups_path } %>
-<%= form_for :group, url: groups_path, method: :post do |form| %>
+<%= form_with model: group, url: new_group_path do |form| %>
 <div class="group-form">
 <%= form.text_field :name, class: 'group-form-field group_name_field', placeholder: 'Category Name' %>
-Insert Icon: <%= form.file_field :image %>
-<%= form.submit "Submit", class: 'group-form-field group-form-btn' %>
+Insert Icon: <%= form.text_field :icon, class: 'group-form-field group_name_field', placeholder: 'Icon path' %>
+<%= form.submit "Submit", class: 'group-form-field group-form-btn', data: {turbo:false}%>
 </div>
 <% end %>

@@ -1728,3 +1728,595 @@ Processing by GroupsController#new as HTML
 Completed 200 OK in 3108ms (Views: 1932.1ms | ActiveRecord: 218.9ms | Allocations: 57058)
 
 
+Started GET "/" for 127.0.0.1 at 2023-02-23 23:54:43 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (60.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (84.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 1517.7ms | Allocations: 23359)
+  [1m[36mGroup Load (40.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 1890.7ms | Allocations: 26599)
+  Rendered layout layouts/application.html.erb (Duration: 2163.5ms | Allocations: 41214)
+Completed 200 OK in 3423ms (Views: 2266.7ms | ActiveRecord: 42.6ms | Allocations: 47942)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-23 23:55:18 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.4ms | Allocations: 1081)
+  Rendered groups/_group_form.html.erb (Duration: 83.9ms | Allocations: 2297)
+  Rendered groups/new.html.erb within layouts/application (Duration: 91.1ms | Allocations: 2577)
+  Rendered layout layouts/application.html.erb (Duration: 167.9ms | Allocations: 16703)
+Completed 200 OK in 240ms (Views: 172.3ms | ActiveRecord: 21.5ms | Allocations: 26230)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-23 23:55:35 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001f5bfbb69d8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230223-14244-ue4fuc.jpg>, @original_filename="1663010662994.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663010662994.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x000001f5bfbbd648>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001f5bfbb69d8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230223-14244-ue4fuc.jpg>, @original_filename="1663010662994.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663010662994.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 117ms (ActiveRecord: 0.9ms | Allocations: 4891)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-23 23:55:38 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001f5c0040d28 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230223-14244-hlpvno.jpg>, @original_filename="1663010662994.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663010662994.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x000001f5c00425b0>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001f5c0040d28 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230223-14244-hlpvno.jpg>, @original_filename="1663010662994.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663010662994.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.7ms | Allocations: 2751)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-23 23:55:43 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001f5c0189ec8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230223-14244-tu7h9l.jpg>, @original_filename="1663010662994.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663010662994.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :image. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x000001f5c018afa8>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "image"=>#<ActionDispatch::Http::UploadedFile:0x000001f5c0189ec8 @tempfile=#<Tempfile:C:/Users/FARANO~1/AppData/Local/Temp/RackMultipart20230223-14244-tu7h9l.jpg>, @original_filename="1663010662994.jpg", @content_type="image/jpeg", @headers="Content-Disposition: form-data; name=\"group[image]\"; filename=\"1663010662994.jpg\"\r\nContent-Type: image/jpeg\r\n">}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 0.7ms | Allocations: 2519)
+
+
+Started GET "/sign_out" for 127.0.0.1 at 2023-02-23 23:56:01 +0430
+  
+ActionController::RoutingError (No route matches [GET] "/sign_out"):
+  
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-23 23:56:25 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 11.8ms | Allocations: 994)
+  Rendered groups/_group_form.html.erb (Duration: 16.4ms | Allocations: 1515)
+  Rendered groups/new.html.erb within layouts/application (Duration: 17.7ms | Allocations: 1580)
+  Rendered layout layouts/application.html.erb (Duration: 43.5ms | Allocations: 3790)
+Completed 200 OK in 58ms (Views: 45.5ms | ActiveRecord: 0.8ms | Allocations: 5761)
+
+
+Started GET "/rails/info/routes" for 127.0.0.1 at 2023-02-23 23:57:28 +0430
+Processing by Rails::InfoController#routes as HTML
+  Rendering layout C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/layouts/application.html.erb
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application
+  Rendered collection of C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4.2/lib/action_dispatch/middleware/templates/routes/_route.html.erb [52 times] (Duration: 31.2ms | Allocations: 8289)
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/actionpack-7.0.4.2/lib/action_dispatch/middleware/templates/routes/_table.html.erb (Duration: 2.4ms | Allocations: 838)
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/info/routes.html.erb within layouts/application (Duration: 85.3ms | Allocations: 14810)
+  Rendered layout C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/layouts/application.html.erb (Duration: 102.3ms | Allocations: 15070)
+Completed 200 OK in 135ms (Views: 125.0ms | ActiveRecord: 0.0ms | Allocations: 16052)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-23 23:59:47 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 11.0ms | Allocations: 1256)
+  Rendered groups/_group_form.html.erb (Duration: 25.3ms | Allocations: 2079)
+  Rendered groups/new.html.erb within layouts/application (Duration: 30.6ms | Allocations: 2316)
+  Rendered layout layouts/application.html.erb (Duration: 62.8ms | Allocations: 4759)
+Completed 200 OK in 101ms (Views: 86.2ms | ActiveRecord: 0.5ms | Allocations: 7258)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-23 23:59:59 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :icon. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x000001f5c0454860>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 41ms (ActiveRecord: 0.7ms | Allocations: 2970)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:00:03 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+[31mUnpermitted parameter: :icon. Context: { controller: GroupsController, action: create, request: #<ActionDispatch::Request:0x000001f5c0532200>, params: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit", "controller"=>"groups", "action"=>"create"} }[0m
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 18ms (ActiveRecord: 0.4ms | Allocations: 2477)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 00:01:18 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.2ms | Allocations: 1089)
+  Rendered groups/_group_form.html.erb (Duration: 9.1ms | Allocations: 1680)
+  Rendered groups/new.html.erb within layouts/application (Duration: 10.1ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 121.5ms | Allocations: 15871)
+Completed 200 OK in 211ms (Views: 139.5ms | ActiveRecord: 16.6ms | Allocations: 24442)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:01:29 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 0.4ms | Allocations: 3850)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:01:34 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.3ms | Allocations: 2408)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:02:22 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.3ms | Allocations: 2411)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 00:04:09 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 12.0ms | Allocations: 1089)
+  Rendered groups/_group_form.html.erb (Duration: 14.6ms | Allocations: 1680)
+  Rendered groups/new.html.erb within layouts/application (Duration: 15.4ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 100.6ms | Allocations: 15870)
+Completed 200 OK in 177ms (Views: 103.8ms | ActiveRecord: 18.4ms | Allocations: 24432)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:04:20 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 0.8ms | Allocations: 2215)
+
+
+  
+ArgumentError (wrong number of arguments (given 2, expected 0..1)):
+  
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 00:05:26 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 23.3ms | Allocations: 1089)
+  Rendered groups/_group_form.html.erb (Duration: 28.6ms | Allocations: 1680)
+  Rendered groups/new.html.erb within layouts/application (Duration: 44.9ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 156.2ms | Allocations: 15872)
+Completed 200 OK in 265ms (Views: 161.0ms | ActiveRecord: 22.7ms | Allocations: 24428)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:05:38 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 43ms (ActiveRecord: 0.3ms | Allocations: 2809)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'user' for Group.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 00:06:03 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.2ms | Allocations: 1089)
+  Rendered groups/_group_form.html.erb (Duration: 9.4ms | Allocations: 1680)
+  Rendered groups/new.html.erb within layouts/application (Duration: 11.0ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 95.5ms | Allocations: 15871)
+Completed 200 OK in 176ms (Views: 99.3ms | ActiveRecord: 17.3ms | Allocations: 24429)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:06:13 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 126ms (ActiveRecord: 0.4ms | Allocations: 4306)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `author_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 00:07:26 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 10.3ms | Allocations: 1089)
+  Rendered groups/_group_form.html.erb (Duration: 15.4ms | Allocations: 1680)
+  Rendered groups/new.html.erb within layouts/application (Duration: 16.5ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 123.6ms | Allocations: 15899)
+Completed 200 OK in 234ms (Views: 129.4ms | ActiveRecord: 21.0ms | Allocations: 24456)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:07:36 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.5ms | Allocations: 4206)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `author_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 00:09:14 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 8.6ms | Allocations: 1089)
+  Rendered groups/_group_form.html.erb (Duration: 13.3ms | Allocations: 1680)
+  Rendered groups/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 134.8ms | Allocations: 15875)
+Completed 200 OK in 214ms (Views: 137.7ms | ActiveRecord: 16.4ms | Allocations: 24427)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:09:25 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 12ms (ActiveRecord: 0.3ms | Allocations: 2706)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'author_id' for Group.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 00:10:15 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 10.4ms | Allocations: 1089)
+  Rendered groups/_group_form.html.erb (Duration: 13.6ms | Allocations: 1680)
+  Rendered groups/new.html.erb within layouts/application (Duration: 14.4ms | Allocations: 1758)
+  Rendered layout layouts/application.html.erb (Duration: 124.5ms | Allocations: 15871)
+Completed 200 OK in 203ms (Views: 128.8ms | ActiveRecord: 20.6ms | Allocations: 24438)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 00:10:27 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 15ms (ActiveRecord: 0.3ms | Allocations: 2958)
+
+
+  
+ActiveModel::UnknownAttributeError (unknown attribute 'author_id' for Group.
+
+          raise UnknownAttributeError.new(self, k.to_s)
+          ^^^^^):
+  
+app/controllers/groups_controller.rb:13:in `create'
+  [1m[36mUser Load (3.3ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+  [1m[36mGroup Load (3.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups"[0m
+  [1m[35m (30.6ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3462961633047280245)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Load (21.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(3462961633047280245)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" ORDER BY "users"."id" ASC LIMIT $1[0m  [["LIMIT", 1]]
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 22:49:27 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (4.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 406ms (ActiveRecord: 24.7ms | Allocations: 12874)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `author_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 23:07:02 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (3.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 16.6ms | Allocations: 1088)
+  Rendered groups/_group_form.html.erb (Duration: 40.1ms | Allocations: 1679)
+  Rendered groups/new.html.erb within layouts/application (Duration: 72.8ms | Allocations: 1757)
+  Rendered layout layouts/application.html.erb (Duration: 323.4ms | Allocations: 15870)
+Completed 200 OK in 531ms (Views: 328.3ms | ActiveRecord: 22.3ms | Allocations: 26757)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:07:17 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 16ms (ActiveRecord: 0.6ms | Allocations: 4227)
+
+
+  
+ActiveModel::MissingAttributeError (can't write unknown attribute `author_id`
+
+          raise ActiveModel::MissingAttributeError, "can't write unknown attribute `#{name}`"
+          ^^^^^):
+  
+app/controllers/groups_controller.rb:12:in `create'
+Started GET "/" for 127.0.0.1 at 2023-02-24 23:11:45 +0430
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.7ms | Allocations: 1074)
+  [1m[36mGroup Load (23.1ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 96.8ms | Allocations: 2934)
+  Rendered layout layouts/application.html.erb (Duration: 170.1ms | Allocations: 17052)
+Completed 200 OK in 192ms (Views: 148.2ms | ActiveRecord: 25.5ms | Allocations: 20024)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-24 23:11:49 +0430
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.3ms | Allocations: 856)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 11.1ms | Allocations: 1713)
+  Rendered layout layouts/application.html.erb (Duration: 26.5ms | Allocations: 3892)
+Completed 200 OK in 33ms (Views: 27.7ms | ActiveRecord: 0.6ms | Allocations: 4243)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 23:11:51 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 7.0ms | Allocations: 862)
+  Rendered groups/_group_form.html.erb (Duration: 9.5ms | Allocations: 1422)
+  Rendered groups/new.html.erb within layouts/application (Duration: 10.3ms | Allocations: 1489)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 3666)
+Completed 200 OK in 44ms (Views: 25.7ms | ActiveRecord: 3.9ms | Allocations: 6696)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:11:57 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.6ms | Allocations: 2970)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:12:00 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.4ms | Allocations: 2253)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:12:03 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 0.5ms | Allocations: 2250)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:12:04 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.4ms | Allocations: 2259)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 23:15:21 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 24.2ms | Allocations: 1274)
+  Rendered groups/_group_form.html.erb (Duration: 30.2ms | Allocations: 2169)
+  Rendered groups/new.html.erb within layouts/application (Duration: 43.5ms | Allocations: 2411)
+  Rendered layout layouts/application.html.erb (Duration: 155.3ms | Allocations: 16703)
+Completed 200 OK in 213ms (Views: 166.3ms | ActiveRecord: 11.7ms | Allocations: 25534)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:15:32 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 23ms (ActiveRecord: 0.3ms | Allocations: 3367)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:15:34 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.4ms | Allocations: 2238)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:15:36 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.4ms | Allocations: 2241)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:15:38 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 12ms (ActiveRecord: 0.4ms | Allocations: 2241)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:15:39 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.4ms | Allocations: 2241)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:15:41 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 13ms (ActiveRecord: 0.4ms | Allocations: 2238)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 23:20:22 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 27.1ms | Allocations: 1259)
+  Rendered groups/_group_form.html.erb (Duration: 50.2ms | Allocations: 2121)
+  Rendered groups/new.html.erb within layouts/application (Duration: 66.5ms | Allocations: 2361)
+  Rendered layout layouts/application.html.erb (Duration: 101.5ms | Allocations: 4806)
+Completed 200 OK in 154ms (Views: 135.5ms | ActiveRecord: 0.7ms | Allocations: 7113)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:20:29 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 39ms (ActiveRecord: 0.8ms | Allocations: 2644)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:20:32 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.4ms | Allocations: 2256)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:20:33 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.6ms | Allocations: 2259)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:20:34 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.5ms | Allocations: 2271)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 23:26:41 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (5.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered groups/new.html.erb within layouts/application (Duration: 10.9ms | Allocations: 1136)
+  Rendered layout layouts/application.html.erb (Duration: 16.4ms | Allocations: 1223)
+Completed 500 Internal Server Error in 256ms (ActiveRecord: 22.6ms | Allocations: 6521)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <%= render partial: 'groups/group_form', {group:@group}%>
+):
+1:    <%= render partial: 'groups/group_form', {group:@group}%>
+  
+app/views/groups/new.html.erb:1: syntax error, unexpected ')', expecting =>
+app/views/groups/new.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/groups/new.html.erb:1: syntax error, unexpected ')', expecting =>
+app/views/groups/new.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/groups/new.html.erb:1: syntax error, unexpected ')', expecting =>
+app/views/groups/new.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/groups/new.html.erb:1: syntax error, unexpected ')', expecting =>
+app/views/groups/new.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/groups/new.html.erb:1: syntax error, unexpected ')', expecting =>
+app/views/groups/new.html.erb:3: syntax error, unexpected `end', expecting ')'
+app/views/groups/new.html.erb:1: syntax error, unexpected ')', expecting =>
+app/views/groups/new.html.erb:3: syntax error, unexpected `end', expecting ')'
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 23:28:06 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 30.8ms | Allocations: 1261)
+  Rendered groups/_group_form.html.erb (Duration: 43.8ms | Allocations: 2114)
+  Rendered groups/new.html.erb within layouts/application (Duration: 50.3ms | Allocations: 2348)
+  Rendered layout layouts/application.html.erb (Duration: 115.8ms | Allocations: 4798)
+Completed 200 OK in 201ms (Views: 168.9ms | ActiveRecord: 1.2ms | Allocations: 7276)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:28:18 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 49ms (ActiveRecord: 1.0ms | Allocations: 2689)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-24 23:28:20 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 16ms (ActiveRecord: 0.7ms | Allocations: 2235)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-24 23:32:17 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (3.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 11.3ms | Allocations: 1256)
+  Rendered groups/_group_form.html.erb (Duration: 19.7ms | Allocations: 2112)
+  Rendered groups/new.html.erb within layouts/application (Duration: 31.0ms | Allocations: 2346)
+  Rendered layout layouts/application.html.erb (Duration: 53.1ms | Allocations: 4783)
+Completed 200 OK in 92ms (Views: 70.5ms | ActiveRecord: 3.8ms | Allocations: 7091)
+
+
+Started POST "/groups/new" for 127.0.0.1 at 2023-02-24 23:32:31 +0430
+  
+ActionController::RoutingError (No route matches [POST] "/groups/new"):
+  

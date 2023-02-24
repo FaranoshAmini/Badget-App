@@ -9,10 +9,12 @@ class GroupsController < ApplicationController
   end
 
   def create
-    @group = current_user.groups.new(gro_params)
+    # @group = Group.new(name: params[:group][:name], icon: params[:group][:icon], author: current_user)
+    @group = Group.new(gro_params)
+    @group.user_id = current_user.id
     if @group.save
-      flash[:notice] = 'Successfully created Category.'
-      redirect_to groups_path
+      # flash[:notice] = 'Successfully created Category.'
+      redirect_to groups_path, notice: 'Category was successfully created.'
     else
       flash[:notice] = 'Invalid Category. Please try again.'
     end
@@ -21,6 +23,6 @@ class GroupsController < ApplicationController
   private
 
   def gro_params
-    params.require(:group).permit(:name)
+    params.require(:group).permit(:name, :icon)
   end
 end
