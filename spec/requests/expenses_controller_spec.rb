@@ -7,7 +7,7 @@ RSpec.describe Expense, type: :request do
     sign_in @user
     @category = Group.create(name: 'school Payments', icon: '123.png')
     @expense = Expense.create(name: 'fulltime Payment', amount: 500,
-                                      group_id: @group_id, user_id: @user.id)
+                              group_id: @group_id, user_id: @user.id)
     get group_expenses_path(@group)
   end
   describe 'Testing the index method of Expense controller' do

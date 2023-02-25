@@ -25,7 +25,7 @@ RSpec.describe 'Groups', type: :feature do
     end
   end
 
-  describe 'Testing new view of categories' do
+  describe 'Testing new view of groups' do
     before(:each) { click_link 'Create Category' }
     it 'should have name field' do
       expect(page).to have_field(type: 'text')

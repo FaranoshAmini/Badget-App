@@ -6,7 +6,7 @@ RSpec.describe 'splash', type: :feature do
     @user.confirm
     @category = Group.create(name: 'School Payments', icon: '123.png')
     @expense = Expense.create(name: 'fullPayment', amount: 500,
-        group_id: @group_id, user_id: @user.id)
+                              group_id: @group_id, user_id: @user.id)
     visit new_user_session_path
     fill_in 'Email', with: 'faranosh.amini4@gmail.com'
     fill_in 'Password', with: 'Faranosh'
