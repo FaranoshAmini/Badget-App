@@ -2320,3 +2320,44 @@ Started POST "/groups/new" for 127.0.0.1 at 2023-02-24 23:32:31 +0430
   
 ActionController::RoutingError (No route matches [POST] "/groups/new"):
   
+Started POST "/groups/new" for 127.0.0.1 at 2023-02-26 19:19:22 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (36.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [POST] "/groups/new"):
+  
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 19:35:03 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (75.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 1709.0ms | Allocations: 30191)
+  Rendered groups/_group_form.html.erb (Duration: 1720.5ms | Allocations: 31259)
+  Rendered groups/new.html.erb within layouts/application (Duration: 1724.1ms | Allocations: 31497)
+  Rendered layout layouts/application.html.erb (Duration: 1931.6ms | Allocations: 45809)
+Completed 200 OK in 2926ms (Views: 1941.8ms | ActiveRecord: 307.5ms | Allocations: 64646)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 19:35:15 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 168ms (ActiveRecord: 0.6ms | Allocations: 4199)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 19:35:17 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 17ms (ActiveRecord: 0.8ms | Allocations: 2482)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 19:35:18 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.6ms | Allocations: 2258)
+
+
