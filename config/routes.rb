@@ -1,10 +1,7 @@
 Rails.application.routes.draw do
-  devise_for :users
+  devise_for :users, :controllers => {:registrations => "registrations"}
 
-    authenticated :user do
-      root 'groups#index'
-      
-    end
+  root "home#index"
     resources :groups, only: [:index, :new, :create] do
       resources :expenses, only: [:index, :new, :create] 
     end

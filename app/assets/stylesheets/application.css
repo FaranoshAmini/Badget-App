@@ -170,3 +170,47 @@ li {
   color: white;
   border-radius: 3px;
 }
+
+.bttn {
+  width: 100%;
+  padding: 20px;
+  position: absolute;
+  bottom: 0;
+  display: block;
+  text-align: center;
+  font-family: proxima-nova, sans-serif;
+  background-color: var(--sec-color);
+  color: #fff;
+  text-decoration: none;
+}
+
+section#first-page header {
+  padding-top: 25vh;
+}
+
+section#first-page h1 {
+  text-align: center;
+}
+
+section#first-page nav {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+}
+
+section#first-page nav .bttn {
+  position: initial;
+}
+
+.blue-bttn {
+  background-color: #3778c2 !important;
+}
+
+.grey-bttn {
+  background-color: inherit !important;
+  color: #434b54;
+}
+
+.grey-bttn a {
+  color: #434b54 !important;
+}

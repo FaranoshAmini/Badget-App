@@ -2361,3 +2361,1026 @@ No template found for GroupsController#create, rendering head :no_content
 Completed 204 No Content in 14ms (ActiveRecord: 0.6ms | Allocations: 2258)
 
 
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:12:50 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (22.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (97.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 2257.8ms | Allocations: 30423)
+  Rendered groups/_group_form.html.erb (Duration: 2390.4ms | Allocations: 31691)
+  Rendered groups/new.html.erb within layouts/application (Duration: 2521.8ms | Allocations: 32190)
+  Rendered layout layouts/application.html.erb (Duration: 2670.1ms | Allocations: 46642)
+Completed 200 OK in 4092ms (Views: 2987.7ms | ActiveRecord: 180.6ms | Allocations: 63838)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:13:09 +0430
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 9.3ms | Allocations: 992)
+  [1m[36mGroup Load (64.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 648.9ms | Allocations: 3408)
+  Rendered layout layouts/application.html.erb (Duration: 687.8ms | Allocations: 5670)
+Completed 200 OK in 990ms (Views: 628.7ms | ActiveRecord: 64.4ms | Allocations: 7510)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:13:53 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 11.6ms | Allocations: 877)
+  Rendered groups/_group_form.html.erb (Duration: 20.6ms | Allocations: 1406)
+  Rendered groups/new.html.erb within layouts/application (Duration: 22.7ms | Allocations: 1474)
+  Rendered layout layouts/application.html.erb (Duration: 58.0ms | Allocations: 3600)
+Completed 200 OK in 82ms (Views: 65.4ms | ActiveRecord: 0.8ms | Allocations: 5551)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:14:02 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 70ms (ActiveRecord: 1.1ms | Allocations: 3914)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:14:22 +0430
+Processing by GroupsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 29ms (ActiveRecord: 0.9ms | Allocations: 2494)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:18:07 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 12.4ms | Allocations: 1257)
+  Rendered groups/_group_form.html.erb (Duration: 64.0ms | Allocations: 2069)
+  Rendered groups/new.html.erb within layouts/application (Duration: 68.2ms | Allocations: 2306)
+  Rendered layout layouts/application.html.erb (Duration: 88.7ms | Allocations: 4693)
+Completed 200 OK in 124ms (Views: 101.0ms | ActiveRecord: 0.8ms | Allocations: 6989)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:20:15 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 10.6ms | Allocations: 1088)
+  Rendered groups/_group_form.html.erb (Duration: 17.1ms | Allocations: 1677)
+  Rendered groups/new.html.erb within layouts/application (Duration: 18.8ms | Allocations: 1752)
+  Rendered layout layouts/application.html.erb (Duration: 75.6ms | Allocations: 15808)
+Completed 200 OK in 130ms (Views: 81.1ms | ActiveRecord: 13.4ms | Allocations: 24381)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:20:25 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 27ms (ActiveRecord: 0.5ms | Allocations: 3386)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:20:28 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.4ms | Allocations: 2282)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:20:29 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.4ms | Allocations: 2285)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:20:30 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.5ms | Allocations: 2253)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:20:32 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.5ms | Allocations: 2249)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:22:30 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 11.0ms | Allocations: 1088)
+  Rendered groups/_group_form.html.erb (Duration: 14.0ms | Allocations: 1677)
+  Rendered groups/new.html.erb within layouts/application (Duration: 14.9ms | Allocations: 1752)
+  Rendered layout layouts/application.html.erb (Duration: 100.4ms | Allocations: 15807)
+Completed 200 OK in 181ms (Views: 102.9ms | ActiveRecord: 19.4ms | Allocations: 24360)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:22:39 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 15ms (ActiveRecord: 0.4ms | Allocations: 3195)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:22:41 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+No template found for GroupsController#create, rendering head :no_content
+Completed 204 No Content in 14ms (ActiveRecord: 0.5ms | Allocations: 2306)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:25:30 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (1.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 10.8ms | Allocations: 1088)
+  Rendered groups/_group_form.html.erb (Duration: 13.5ms | Allocations: 1677)
+  Rendered groups/new.html.erb within layouts/application (Duration: 14.3ms | Allocations: 1752)
+  Rendered layout layouts/application.html.erb (Duration: 112.2ms | Allocations: 15817)
+Completed 200 OK in 188ms (Views: 116.6ms | ActiveRecord: 18.4ms | Allocations: 24401)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:25:42 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 37ms (ActiveRecord: 0.6ms | Allocations: 6838)
+
+
+  
+NoMethodError (undefined method `author_id=' for #<Group id: nil, name: "Group 1", icon: "#", user_id: nil, created_at: nil, updated_at: nil>
+Did you mean?  author=):
+  
+app/controllers/groups_controller.rb:16:in `create'
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:28:19 +0430
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 8.3ms | Allocations: 1073)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 22.2ms | Allocations: 2929)
+  Rendered layout layouts/application.html.erb (Duration: 99.6ms | Allocations: 16984)
+Completed 200 OK in 160ms (Views: 101.0ms | ActiveRecord: 3.3ms | Allocations: 20027)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:28:23 +0430
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 13.3ms | Allocations: 853)
+  [1m[36mGroup Load (1.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 22.9ms | Allocations: 1710)
+  Rendered layout layouts/application.html.erb (Duration: 37.4ms | Allocations: 3835)
+Completed 200 OK in 46ms (Views: 40.1ms | ActiveRecord: 1.0ms | Allocations: 4186)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:28:26 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 7.1ms | Allocations: 862)
+  Rendered groups/_group_form.html.erb (Duration: 21.0ms | Allocations: 1418)
+  Rendered groups/new.html.erb within layouts/application (Duration: 22.3ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 57.5ms | Allocations: 3610)
+Completed 200 OK in 95ms (Views: 62.0ms | ActiveRecord: 6.2ms | Allocations: 6627)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:28:33 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>""}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 34ms (ActiveRecord: 0.5ms | Allocations: 6508)
+
+
+  
+NoMethodError (undefined method `author_id=' for #<Group id: nil, name: "Group 1", icon: "", user_id: nil, created_at: nil, updated_at: nil>):
+  
+app/controllers/groups_controller.rb:16:in `create'
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:28:37 +0430
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 7.8ms | Allocations: 857)
+  [1m[36mGroup Load (0.9ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 19.5ms | Allocations: 1715)
+  Rendered layout layouts/application.html.erb (Duration: 75.4ms | Allocations: 3852)
+Completed 200 OK in 96ms (Views: 89.3ms | ActiveRecord: 0.9ms | Allocations: 4184)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:28:37 +0430
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.5ms | Allocations: 856)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 14.1ms | Allocations: 1713)
+  Rendered layout layouts/application.html.erb (Duration: 55.4ms | Allocations: 3838)
+Completed 200 OK in 81ms (Views: 74.8ms | ActiveRecord: 0.8ms | Allocations: 4167)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:28:40 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 11.1ms | Allocations: 862)
+  Rendered groups/_group_form.html.erb (Duration: 16.6ms | Allocations: 1345)
+  Rendered groups/new.html.erb within layouts/application (Duration: 19.6ms | Allocations: 1409)
+  Rendered layout layouts/application.html.erb (Duration: 68.5ms | Allocations: 3535)
+Completed 200 OK in 91ms (Views: 76.2ms | ActiveRecord: 0.6ms | Allocations: 5275)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:28:48 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Completed 500 Internal Server Error in 27ms (ActiveRecord: 0.4ms | Allocations: 6377)
+
+
+  
+NoMethodError (undefined method `author_id=' for #<Group id: nil, name: "Group 1", icon: "#", user_id: nil, created_at: nil, updated_at: nil>):
+  
+app/controllers/groups_controller.rb:16:in `create'
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:29:17 +0430
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 11.6ms | Allocations: 1073)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 25.4ms | Allocations: 2651)
+  Rendered layout layouts/application.html.erb (Duration: 156.3ms | Allocations: 16706)
+Completed 200 OK in 220ms (Views: 155.6ms | ActiveRecord: 3.4ms | Allocations: 19616)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:29:22 +0430
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 8.2ms | Allocations: 853)
+  [1m[36mGroup Load (0.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 28.6ms | Allocations: 1710)
+  Rendered layout layouts/application.html.erb (Duration: 48.5ms | Allocations: 3835)
+Completed 200 OK in 61ms (Views: 53.9ms | ActiveRecord: 0.4ms | Allocations: 4186)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-26 23:29:25 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 7.1ms | Allocations: 862)
+  Rendered groups/_group_form.html.erb (Duration: 12.1ms | Allocations: 1418)
+  Rendered groups/new.html.erb within layouts/application (Duration: 13.2ms | Allocations: 1484)
+  Rendered layout layouts/application.html.erb (Duration: 84.1ms | Allocations: 3609)
+Completed 200 OK in 134ms (Views: 104.9ms | ActiveRecord: 5.1ms | Allocations: 6623)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-26 23:29:31 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+  [1m[36mGroup Create (202.8ms)[0m  [1m[32mINSERT INTO "groups" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Group 1"], ["icon", "#"], ["user_id", 34], ["created_at", "2023-02-26 18:59:31.877207"], ["updated_at", "2023-02-26 18:59:31.877207"]]
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (2.3ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/groups
+Completed 302 Found in 243ms (ActiveRecord: 206.5ms | Allocations: 7222)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-02-26 23:29:32 +0430
+Processing by GroupsController#index as TURBO_STREAM
+  [1m[36mUser Load (1.0ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 16.2ms | Allocations: 853)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 445.8ms | Allocations: 7530)
+  Rendered layout layouts/application.html.erb (Duration: 469.1ms | Allocations: 7616)
+Completed 500 Internal Server Error in 549ms (ActiveRecord: 4.2ms | Allocations: 9352)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column expenses.group_id does not exist
+LINE 1: SELECT "expenses".* FROM "expenses" WHERE "expenses"."group_...
+                                                  ^
+):
+    1: <%= render partial: 'shared/navbar', locals: { heading: 'Categories', back_path: groups_path } %>
+    2: <ul class="groups-section">
+    3: <% @groups.includes(:expenses).each do |gro| %>
+    4:     <li class="groups-section-item">
+    5:       <ul class="groups-container">
+    6:        <li class="groups-image">
+  
+app/views/groups/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:34:49 +0430
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 28.0ms | Allocations: 1248)
+  [1m[36mGroup Load (0.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 116.3ms | Allocations: 8726)
+  Rendered layout layouts/application.html.erb (Duration: 160.4ms | Allocations: 8809)
+Completed 500 Internal Server Error in 201ms (ActiveRecord: 0.8ms | Allocations: 9665)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Group id: 1, name: "Group 1", icon: "#", user_id: 34, created_at: "2023-02-26 18:59:31.877207000 +0000", updated_at: "2023-02-26 18:59:31.877207000 +0000">):
+    4:     <li class="groups-section-item">
+    5:       <ul class="groups-container">
+    6:        <li class="groups-image">
+    7:         <%= image_tag(gro.image, class: "groups-image") if gro.image.attached? %>
+    8:         </li>
+    9:         <li class="groups-detail">
+   10:           <span><%= link_to gro.name, group_expenses_path(group_id: gro.id) %></span>
+  
+app/views/groups/index.html.erb:7
+app/views/groups/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:34:51 +0430
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 7.1ms | Allocations: 857)
+  [1m[36mGroup Load (2.0ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 55.6ms | Allocations: 7007)
+  Rendered layout layouts/application.html.erb (Duration: 57.1ms | Allocations: 7084)
+Completed 500 Internal Server Error in 67ms (ActiveRecord: 2.0ms | Allocations: 7412)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Group id: 1, name: "Group 1", icon: "#", user_id: 34, created_at: "2023-02-26 18:59:31.877207000 +0000", updated_at: "2023-02-26 18:59:31.877207000 +0000">):
+    4:     <li class="groups-section-item">
+    5:       <ul class="groups-container">
+    6:        <li class="groups-image">
+    7:         <%= image_tag(gro.image, class: "groups-image") if gro.image.attached? %>
+    8:         </li>
+    9:         <li class="groups-detail">
+   10:           <span><%= link_to gro.name, group_expenses_path(group_id: gro.id) %></span>
+  
+app/views/groups/index.html.erb:7
+app/views/groups/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:34:55 +0430
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 48.1ms | Allocations: 857)
+  [1m[36mGroup Load (0.5ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 94.5ms | Allocations: 7008)
+  Rendered layout layouts/application.html.erb (Duration: 100.7ms | Allocations: 7085)
+Completed 500 Internal Server Error in 115ms (ActiveRecord: 0.5ms | Allocations: 7390)
+
+
+  
+ActionView::Template::Error (undefined method `image' for #<Group id: 1, name: "Group 1", icon: "#", user_id: 34, created_at: "2023-02-26 18:59:31.877207000 +0000", updated_at: "2023-02-26 18:59:31.877207000 +0000">):
+    4:     <li class="groups-section-item">
+    5:       <ul class="groups-container">
+    6:        <li class="groups-image">
+    7:         <%= image_tag(gro.image, class: "groups-image") if gro.image.attached? %>
+    8:         </li>
+    9:         <li class="groups-detail">
+   10:           <span><%= link_to gro.name, group_expenses_path(group_id: gro.id) %></span>
+  
+app/views/groups/index.html.erb:7
+app/views/groups/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:38:37 +0430
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 55.7ms | Allocations: 1249)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 131.1ms | Allocations: 4525)
+  Rendered layout layouts/application.html.erb (Duration: 165.4ms | Allocations: 4608)
+Completed 500 Internal Server Error in 221ms (ActiveRecord: 0.6ms | Allocations: 5441)
+
+
+  
+ActionView::Template::Error (The asset "#" is not present in the asset pipeline.
+):
+    4:     <li class="groups-section-item">
+    5:       <ul class="groups-container">
+    6:        <li class="groups-image">
+    7:         <%= image_tag(gro.icon, class: "groups-image") %>
+    8:         </li>
+    9:         <li class="groups-detail">
+   10:           <span><%= link_to gro.name, group_expenses_path(group_id: gro.id) %></span>
+  
+app/views/groups/index.html.erb:7
+app/views/groups/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:39:20 +0430
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 14.1ms | Allocations: 1248)
+  [1m[36mGroup Load (12.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 128.6ms | Allocations: 8129)
+  Rendered layout layouts/application.html.erb (Duration: 133.9ms | Allocations: 8212)
+Completed 500 Internal Server Error in 165ms (ActiveRecord: 12.4ms | Allocations: 9066)
+
+
+  
+ActionView::Template::Error (undefined method `total_expenses_amount' for #<Group id: 1, name: "Group 1", icon: "#", user_id: 34, created_at: "2023-02-26 18:59:31.877207000 +0000", updated_at: "2023-02-26 18:59:31.877207000 +0000">):
+    11:           <span><%= gro.created_at.strftime("%d-%m-%y") %></span>
+    12:         </li>
+    13:         <li class="groups-amount">
+    14:           <span>$<%= gro.total_expenses_amount %></span>
+    15:         </li>
+    16:         </ul>
+    17:         </li>
+  
+app/views/groups/index.html.erb:14
+app/views/groups/index.html.erb:3
+Started GET "/" for 127.0.0.1 at 2023-02-26 23:39:59 +0430
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 32.2ms | Allocations: 1248)
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 34]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 51.6ms | Allocations: 2657)
+  Rendered layout layouts/application.html.erb (Duration: 83.3ms | Allocations: 5053)
+Completed 200 OK in 120ms (Views: 111.8ms | ActiveRecord: 0.6ms | Allocations: 5935)
+
+
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (38.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.5ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mActiveRecord::SchemaMigration Pluck (0.9ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mActiveRecord::InternalMetadata Pluck (0.8ms)[0m  [1m[34mSELECT "ar_internal_metadata"."value" FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (682.8ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Badget_App_development"[0m
+  [1m[35m (452.4ms)[0m  [1m[35mDROP DATABASE IF EXISTS "Badget_App_test"[0m
+  [1m[35m (3754.1ms)[0m  [1m[35mCREATE DATABASE "Badget_App_development" ENCODING = 'unicode'[0m
+  [1m[35m (632.7ms)[0m  [1m[35mCREATE DATABASE "Badget_App_test" ENCODING = 'unicode'[0m
+  [1m[35m (330.9ms)[0m  [1m[35mCREATE TABLE "schema_migrations" ("version" character varying NOT NULL PRIMARY KEY)[0m
+  [1m[35m (79.4ms)[0m  [1m[35mCREATE TABLE "ar_internal_metadata" ("key" character varying NOT NULL PRIMARY KEY, "value" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[35m (6.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(3462961633047280245)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to CreateUsers (20230215215404)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (101.8ms)[0m  [1m[35mCREATE TABLE "users" ("id" bigserial primary key, "name" character varying, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL)[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.5ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230215215404"]]
+  [1m[36mTRANSACTION (1.8ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateGroups (20230215215734)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (117.9ms)[0m  [1m[35mCREATE TABLE "groups" ("id" bigserial primary key, "name" character varying, "icon" character varying, "user_id" bigint NOT NULL, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_5e78cd340a"
+FOREIGN KEY ("user_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (44.6ms)[0m  [1m[35mCREATE INDEX "index_groups_on_user_id" ON "groups" ("user_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (1.7ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230215215734"]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+Migrating to CreateExpenses (20230216111218)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (110.9ms)[0m  [1m[35mCREATE TABLE "expenses" ("id" bigserial primary key, "author_id" bigint NOT NULL, "name" character varying, "amount" integer, "created_at" timestamp(6) NOT NULL, "updated_at" timestamp(6) NOT NULL, CONSTRAINT "fk_rails_896acdaedb"
+FOREIGN KEY ("author_id")
+  REFERENCES "users" ("id")
+)[0m
+  [1m[35m (46.7ms)[0m  [1m[35mCREATE INDEX "index_expenses_on_author_id" ON "expenses" ("author_id")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.8ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230216111218"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+Migrating to AddDeviseToUsers (20230217070835)
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.1ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (50.0ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (44.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (0.6ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230217070835"]]
+  [1m[36mTRANSACTION (1.1ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::InternalMetadata Create (1.6ms)[0m  [1m[32mINSERT INTO "ar_internal_metadata" ("key", "value", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "key"[0m  [["key", "environment"], ["value", "development"], ["created_at", "2023-02-26 19:29:11.861049"], ["updated_at", "2023-02-26 19:29:11.861049"]]
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(3462961633047280245)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/" for 127.0.0.1 at 2023-02-27 00:01:26 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mUser Load (3.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 34], ["LIMIT", 1]]
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 64.9ms | Allocations: 286)
+Completed 200 OK in 80ms (Views: 70.1ms | ActiveRecord: 0.0ms | Allocations: 1067)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-27 00:01:36 +0430
+Processing by Rails::WelcomeController#index as HTML
+  Rendering C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered C:/Ruby31-x64/lib/ruby/gems/3.1.0/gems/railties-7.0.4.2/lib/rails/templates/rails/welcome/index.html.erb (Duration: 1.9ms | Allocations: 280)
+Completed 200 OK in 22ms (Views: 5.5ms | ActiveRecord: 0.0ms | Allocations: 955)
+
+
+Started GET "/sign_up" for 127.0.0.1 at 2023-02-27 00:01:51 +0430
+  
+ActionController::RoutingError (No route matches [GET] "/sign_up"):
+  
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-27 00:02:05 +0430
+Processing by Devise::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering devise/registrations/new.html.erb within layouts/application
+  Rendered devise/shared/_error_messages.html.erb (Duration: 23.6ms | Allocations: 238)
+  Rendered devise/shared/_links.html.erb (Duration: 79.0ms | Allocations: 577)
+  Rendered devise/registrations/new.html.erb within layouts/application (Duration: 383.3ms | Allocations: 5345)
+  Rendered layout layouts/application.html.erb (Duration: 435.6ms | Allocations: 19827)
+Completed 200 OK in 498ms (Views: 449.6ms | ActiveRecord: 0.0ms | Allocations: 23501)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-02-27 00:02:25 +0430
+Processing by Devise::RegistrationsController#create as HTML
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"Faranosh Amini", "email"=>"faranosh.amini4@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "faranosh.amini4@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (2.9ms)[0m  [1m[32mINSERT INTO "users" ("name", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at") VALUES ($1, $2, $3, $4, $5, $6, $7, $8) RETURNING "id"[0m  [["name", "Faranosh Amini"], ["created_at", "2023-02-26 19:32:26.404507"], ["updated_at", "2023-02-26 19:32:26.404507"], ["email", "faranosh.amini4@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil]]
+  [1m[36mTRANSACTION (2.1ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://127.0.0.1:3000/
+Completed 302 Found in 465ms (ActiveRecord: 6.9ms | Allocations: 8169)
+
+
+Started GET "/" for 127.0.0.1 at 2023-02-27 00:02:26 +0430
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Processing by GroupsController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.8ms | Allocations: 1260)
+  [1m[36mGroup Load (2.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 20.1ms | Allocations: 3540)
+  Rendered layout layouts/application.html.erb (Duration: 33.0ms | Allocations: 5739)
+Completed 200 OK in 53ms (Views: 37.7ms | ActiveRecord: 2.4ms | Allocations: 8242)
+
+
+Started GET "/groups/new" for 127.0.0.1 at 2023-02-27 00:02:32 +0430
+Processing by GroupsController#new as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 4.5ms | Allocations: 862)
+  Rendered groups/_group_form.html.erb (Duration: 9.6ms | Allocations: 1617)
+  Rendered groups/new.html.erb within layouts/application (Duration: 17.0ms | Allocations: 1819)
+  Rendered layout layouts/application.html.erb (Duration: 42.9ms | Allocations: 3944)
+Completed 200 OK in 64ms (Views: 44.7ms | ActiveRecord: 0.5ms | Allocations: 7057)
+
+
+Started POST "/groups" for 127.0.0.1 at 2023-02-27 00:02:39 +0430
+Processing by GroupsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "group"=>{"name"=>"Group 1", "icon"=>"#"}, "commit"=>"Submit"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+  [1m[36mGroup Create (2.8ms)[0m  [1m[32mINSERT INTO "groups" ("name", "icon", "user_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["name", "Group 1"], ["icon", "#"], ["user_id", 1], ["created_at", "2023-02-26 19:32:39.974670"], ["updated_at", "2023-02-26 19:32:39.974670"]]
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mCOMMIT[0m
+  ↳ app/controllers/groups_controller.rb:17:in `create'
+Redirected to http://127.0.0.1:3000/groups
+Completed 302 Found in 37ms (ActiveRecord: 5.3ms | Allocations: 6306)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-02-27 00:02:40 +0430
+Processing by GroupsController#index as TURBO_STREAM
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.3ms | Allocations: 853)
+  [1m[36mGroup Load (0.7ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 12.3ms | Allocations: 1802)
+  Rendered layout layouts/application.html.erb (Duration: 23.6ms | Allocations: 3927)
+Completed 200 OK in 36ms (Views: 24.7ms | ActiveRecord: 1.3ms | Allocations: 5735)
+
+
+Started GET "/groups/1" for 127.0.0.1 at 2023-02-27 00:02:53 +0430
+  
+ActionController::RoutingError (No route matches [GET] "/groups/1"):
+  
+Started GET "/groups/1/expenses/new" for 127.0.0.1 at 2023-02-27 00:03:25 +0430
+Processing by ExpensesController#new as HTML
+  Parameters: {"group_id"=>"1"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  [1m[36mGroup Load (0.6ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/expenses_controller.rb:7:in `new'
+  Rendering layout layouts/application.html.erb
+  Rendering expenses/new.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.4ms | Allocations: 1083)
+  Rendered expenses/_expense_form.html.erb (Duration: 64.6ms | Allocations: 5029)
+  Rendered expenses/new.html.erb within layouts/application (Duration: 88.3ms | Allocations: 6502)
+  Rendered layout layouts/application.html.erb (Duration: 89.5ms | Allocations: 6585)
+Completed 500 Internal Server Error in 141ms (ActiveRecord: 11.8ms | Allocations: 13324)
+
+
+  
+ActionView::Template::Error (undefined method `group_expense_path' for #<ActionView::Base:0x0000000002c740>
+
+            @virtual_path = "expenses/_expense_form";;@output_buffer.append=  form_for :Expense, url: group_expense_path(@group), method: :post do |form|  @output_buffer.safe_append='
+                                                                                                      ^^^^^^^^^^^^^^^^^^
+Did you mean?  group_expenses_path
+               group_expenses_url):
+    1: <%= form_for :Expense, url: group_expense_path(@group), method: :post do |form|  %>
+    2:   <div class='expense-form'>
+    3:     <%= form.text_field :name, class: 'expense_name_field expense_form_field', placeholder: 'Name' %>
+    4:     <%= form.text_field :amount, class: 'expense_amount_field expense_form_field', placeholder: 'Amount' %>
+  
+app/views/expenses/_expense_form.html.erb:1
+app/views/expenses/new.html.erb:2
+Started GET "/groups" for 127.0.0.1 at 2023-02-27 00:05:04 +0430
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 5.8ms | Allocations: 857)
+  [1m[36mGroup Load (2.3ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 14.8ms | Allocations: 1771)
+  Rendered layout layouts/application.html.erb (Duration: 28.0ms | Allocations: 3926)
+Completed 200 OK in 43ms (Views: 28.5ms | ActiveRecord: 2.9ms | Allocations: 5906)
+
+
+Started GET "/groups" for 127.0.0.1 at 2023-02-27 00:17:13 +0430
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (4.1ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 6.9ms | Allocations: 1259)
+  [1m[36mGroup Load (2.8ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 59.4ms | Allocations: 8639)
+  Rendered layout layouts/application.html.erb (Duration: 60.6ms | Allocations: 8734)
+Completed 500 Internal Server Error in 102ms (ActiveRecord: 7.4ms | Allocations: 16093)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column expenses.group_id does not exist
+LINE 1: SELECT "expenses".* FROM "expenses" WHERE "expenses"."group_...
+                                                  ^
+):
+    1: <%= render partial: 'shared/navbar', locals: { heading: 'Categories', back_path: groups_path } %>
+    2: <ul class="groups-section">
+    3: <% @groups.includes(:expenses).each do |gro| %>
+    4:     <li class="groups-section-item">
+    5:       <ul class="groups-container">
+    6:        <li class="groups-image">
+  
+app/views/groups/index.html.erb:3
+Started GET "/groups" for 127.0.0.1 at 2023-02-27 00:17:17 +0430
+Processing by GroupsController#index as HTML
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering groups/index.html.erb within layouts/application
+  Rendered shared/_navbar.html.erb (Duration: 19.2ms | Allocations: 981)
+  [1m[36mGroup Load (1.4ms)[0m  [1m[34mSELECT "groups".* FROM "groups" WHERE "groups"."user_id" = $1[0m  [["user_id", 1]]
+  ↳ app/views/groups/index.html.erb:3
+  Rendered groups/index.html.erb within layouts/application (Duration: 32.8ms | Allocations: 3769)
+  Rendered layout layouts/application.html.erb (Duration: 39.2ms | Allocations: 3846)
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 2.2ms | Allocations: 5722)
+
+
+  
+ActionView::Template::Error (PG::UndefinedColumn: ERROR:  column expenses.group_id does not exist
+LINE 1: SELECT "expenses".* FROM "expenses" WHERE "expenses"."group_...
+                                                  ^
+):
+    1: <%= render partial: 'shared/navbar', locals: { heading: 'Categories', back_path: groups_path } %>
+    2: <ul class="groups-section">
+    3: <% @groups.includes(:expenses).each do |gro| %>
+    4:     <li class="groups-section-item">
+    5:       <ul class="groups-container">
+    6:        <li class="groups-image">
+  
+app/views/groups/index.html.erb:3
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-02-27 00:17:28 +0430
+  
+ActionController::RoutingError (uninitialized constant RegistrationsController
+
+      Object.const_get(camel_cased_word)
+            ^^^^^^^^^^
+
+            raise MissingController.new(error.message, error.name)
+            ^^^^^):
+  
+Started GET "/" for 127.0.0.1 at 2023-02-27 00:17:36 +0430
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 27ms (ActiveRecord: 0.8ms | Allocations: 2532)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/home" for 127.0.0.1 at 2023-02-27 00:29:05 +0430
+  
+ActionController::RoutingError (No route matches [GET] "/home"):
+  
+Started GET "/" for 127.0.0.1 at 2023-02-27 00:29:31 +0430
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (3.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 129ms (ActiveRecord: 18.6ms | Allocations: 5015)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-02-27 00:29:36 +0430
+Processing by HomeController#index as HTML
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+Completed 406 Not Acceptable in 11ms (ActiveRecord: 0.5ms | Allocations: 1995)
+
+
+  
+ActionController::MissingExactTemplate (HomeController#index is missing a template for request formats: text/html):
+  
+actionpack (7.0.4.2) lib/action_controller/metal/implicit_render.rb:45:in `default_render'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `block in send_action'
+<internal:kernel>:90:in `tap'
+actionpack (7.0.4.2) lib/action_controller/metal/basic_implicit_render.rb:6:in `send_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:215:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rendering.rb:53:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:234:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:118:in `block in run_callbacks'
+actiontext (7.0.4.2) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.2) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.2) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.2) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.2) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.2) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.2) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.2) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.2) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.2) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.2) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.2) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.2) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.6.2) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.6.2) lib/rack/etag.rb:27:in `call'
+rack (2.2.6.2) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.6.2) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.6.2) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.2) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.2) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.2) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.2) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.2) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.6.2) lib/rack/method_override.rb:24:in `call'
+rack (2.2.6.2) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.2) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.6.2) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.2) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.2) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
