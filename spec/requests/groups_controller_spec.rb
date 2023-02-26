@@ -2,11 +2,8 @@ require 'rails_helper'
 
 RSpec.describe Group, type: :request do
   before(:each) do
-    @user = User.new(name: 'Faranosh', email: 'faranosh.amini4@gmail.com', password: '123456789')
-    @user.confirm
-    sign_in @user
+    @user = User.create(name: 'Faranosh', email: 'faranosh.amini4@gmail.com', password: '123456789')
     @category = Group.create(name: 'school Payments', icon: '123.png')
-    @category.save
     get groups_path
   end
 
